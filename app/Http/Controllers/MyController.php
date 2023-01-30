@@ -12,9 +12,9 @@ class MyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function sales()
     {
-        //
+        return view('sales');
     }
 
     /**
@@ -22,9 +22,9 @@ class MyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addsales()
     {
-        //
+        return view('addsales');
     }
 
     /**
@@ -33,9 +33,9 @@ class MyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function managesales()
     {
-        //
+        return view('managesales');
     }
 
     /**
