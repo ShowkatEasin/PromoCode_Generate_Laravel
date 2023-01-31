@@ -42,32 +42,44 @@ class MyController extends Controller
         return view('managesales');
     }
 
+    public function coupon(){
+        return view('addcoupon');
+    
+    }
+    public function coupon_store(Request $request){
+       
+        $coupon=new PromoCode();
+        $coupon->coupon_code = bin2hex(openssl_random_pseudo_bytes(6));
+        $coupon->coupon_name = $request->input('coupon_name');
+        $coupon->save();
+        return redirect()->back();
 
-    public function store(Request $request)
-    {
-        $request->validate([
+    }
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
            
-            'product_name' => 'required',
-            'total_price' => 'required',
-            'promo_code' => 'required',
-            'discount_amount' => 'required',
-            'grand_total' => 'required',
+    //         'product_name' => 'required',
+    //         'total_price' => 'required',
+    //         'promo_code' => 'required',
+    //         'discount_amount' => 'required',
+    //         'grand_total' => 'required',
             
-        ]);
+    //     ]);
 
-         $customer = new PromoCode;
-         $customer->product_name = $request->product_name;
-         $customer->total_price = $request->total_price;
-         $customer->promo_code = $request->promo_code;
-         $customer->discount_amount = $request->discount_amount;
-         $customer->grand_total = $request->grand_total;
+    //      $customer = new PromoCode;
+    //      $customer->product_name = $request->product_name;
+    //      $customer->total_price = $request->total_price;
+    //      $customer->promo_code = $request->promo_code;
+    //      $customer->discount_amount = $request->discount_amount;
+    //      $customer->grand_total = $request->grand_total;
         
-        $customer->save();
+    //     $customer->save();
 
-        return redirect()->action([MyController::class, 'managesales'])
-        //return redirect()->route('managesales');
-       ->with('success','Sales Data has been created successfully.');
-    }  
+    //     return redirect()->action([MyController::class, 'managesales'])
+    //     //return redirect()->route('managesales');
+    //    ->with('success','Sales Data has been created successfully.');
+    // }  
 
     /**
      * Display the specified resource.

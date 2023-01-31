@@ -124,7 +124,7 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
-                    <h2>Add Sales</h2>
+                    <h2>Add Coupon</h2>
                     <p>This PromoCode will capable up to 5000 to expend 15000 </p>
 
                    
@@ -133,34 +133,39 @@
                         <div id="home" class="tab-pane fade active in">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Sales Details</h4>
+                                    <h4>Order Details</h4>
                                     <p>You can use your Promo Code for 15000 BDT expend</p>
+                                    <h3>Coupons Codes:</h3>
+                                    <ul>
+                                        @foreach ($coupons as $item)
+                                        <li>{{ $item->coupon_code }}</li>
+                                            
+                                        @endforeach
+                                    </ul>
                                 </div>
                                 <div class="bor">
-									<form method="post" action="product">
+									<form method="post" action="{{ route('order_create') }}">
                                     @csrf
                                         <div class="row">
+                                            <ul>
+                                            @foreach ($products as $product)
+                                            <li>
+                                                <input type="checkbox" id="{{ $product->name }}"  name="products[]" value="{{ $product->price }}">
+                                                <label for="{{ $product->name }}"> {{ $product->name }}  {{ $product->price }}</label>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+
                                             <div class="input-field col s12">
-                                               <input type="text" name="name" value="" class="validate">
-                                                <label class="">Product Name and Price</label>
+                                                <input type="text" name="user_name" value="" class="validate">
+                                                <label class="">customer Name</label>
                                             </div>
+                                            @if ($coupon)
                                             <div class="input-field col s12">
-                                                <input type="text" name="price" value="" class="validate">
-                                                <label>Product Name and Price</label>
+                                                <input type="text" name="coupon_code" value="" class="validate">
+                                                <label class="">coupon code</label>
                                             </div>
-											{{-- <div class="input-field col s12">
-                                                <input type="text" name="promo_code" value="" class="validate">
-                                                <button class="btn btn-info btn-sm">Apply Coupon</button>
-                                                <label>Promo Code</label>
-                                            </div> --}}
-											{{-- <div class="input-field col s12">
-                                                <input type="text" name="discount_amount"  class="validate" readonly>
-                                                <label>Discount Amount</label>
-                                            </div> --}}
-											{{-- <div class="input-field col s12">
-                                                <input type="text" name="grand_total" class="validate" readonly>
-                                                <label>Grand Total</label>
-                                            </div> --}}
+                                            @endif
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">

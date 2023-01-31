@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-         Schema::create('promo_codes', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('coupon_name');
-        $table->string('coupon_code');
-        $table->boolean('coupon_used')->default(0);
-        $table->integer('coupon_disc')->default(5000);
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->string('user_name');
+            $table->bigInteger('total_price');
             $table->timestamps();
-        }); 
+        });
     }
 
     /**
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('promo_codes');
+        Schema::dropIfExists('orders');
     }
 };

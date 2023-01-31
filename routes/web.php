@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\OrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,16 @@ use App\Http\Controllers\MyController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::name('order_')->group(function () {
+    Route::get('/order', [OrdersController::class, 'index'])->name('home');
+    Route::post('/order', [OrdersController::class, 'store'])->name('create');
+ });
 
+Route::name('coupon_')->group(function () {  
+    Route::get('/coupon',[MyController::class,'coupon'])->name("page");
+    Route::post('/coupon',[MyController::class,'coupon_store'])->name("create");
+});
 Route::get('/sales',[MyController::class,'sales'])->name("SalesPage");
 Route::get('/addsales',[MyController::class,'addsales'])->name("AddSales");
 Route::get('/managesales',[MyController::class,'managesales'])->name("ManageSales");
+Route::post('/product', [ProductsController::class, 'store'])->name('product');

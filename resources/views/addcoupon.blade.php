@@ -124,7 +124,7 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
-                    <h2>Add Sales</h2>
+                    <h2>Add Coupon</h2>
                     <p>This PromoCode will capable up to 5000 to expend 15000 </p>
 
                    
@@ -137,17 +137,14 @@
                                     <p>You can use your Promo Code for 15000 BDT expend</p>
                                 </div>
                                 <div class="bor">
-									<form method="post" action="product">
+									<form method="post" action="{{ route('coupon_create') }}">
                                     @csrf
                                         <div class="row">
                                             <div class="input-field col s12">
-                                               <input type="text" name="name" value="" class="validate">
-                                                <label class="">Product Name and Price</label>
+                                                <input type="text" name="coupon_name" value="" class="validate">
+                                                <label class="">Coupon Name</label>
                                             </div>
-                                            <div class="input-field col s12">
-                                                <input type="text" name="price" value="" class="validate">
-                                                <label>Product Name and Price</label>
-                                            </div>
+                                            
 											{{-- <div class="input-field col s12">
                                                 <input type="text" name="promo_code" value="" class="validate">
                                                 <button class="btn btn-info btn-sm">Apply Coupon</button>
