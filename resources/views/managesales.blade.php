@@ -118,7 +118,6 @@
                 <!--== breadcrumbs ==-->
                 <div class="sb2-2-2">
                     <ul>
-                       
                         <li class="page-back"><a href="index-2.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
                         </li>
                     </ul>
@@ -130,71 +129,44 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Enquiry</h4>
-                                    <p>All about students like name, student id, phone, email, country, city and more</p>
+                                    <h4>Sales Details</h4>
                                 </div>
                                 <div class="tab-inn">
                                     <div class="table-responsive table-desi">
+                                        @if ($message = Session::get('success'))
+                                        <div class="alert alert-success">
+                                            <p>{{ $message }}</p>
+                                        </div>
+                                        @endif
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
+                                                    <th>SL No.</th>
                                                     <th>Product Name</th>
                                                     <th>Total Price</th>
 													<th>Promo Code</th>
-                                                    <th>Discount Amount or %</th>
+                                                    <th>Discount Amount </th>
+                                                    <th>Total Discount</th>
 													<th>Grand Total</th>
-													<th>View</th>
+
+													
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                              {{--   @csrf
+                                                @foreach ($customers as $key => $customer) 
+                                                
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>Booking form</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                    <td>{{ $key + 1 }}</td>
+                                                    <td>{{ $customer->product_name }}</td>
+                                                    <td>{{ $customer->total_price }}</td>
+                                                    <td>{{ $customer->promo_codee }}</td>
+                                                    <td>{{ $customer->discount_amount }}</td>
+                                                    <td>{{ $customer->grand_total }}</td>
+													
+													
                                                 </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Course enquiry</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Admission enquiry</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Seminar enquiry</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Event enquiry</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Common enquiry</td>
-                                                    <td>John smith</td>
-                                                    <td>johm_smith@gmail.com</td>
-													<td>+10 8415 6352</td>
-													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
-                                                </tr>
+                                                @endforeach --}}
                                             </tbody>
                                         </table>
                                     </div>

@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('promo_codes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+       /*  Schema::create('promo_codes', function (Blueprint $table) {
+        $table->increments('id');
+        $table->string('product_name');
+        $table->string('total_price');
+        $table->string('promo_code');
+        $table->string('discount_amount');
+        $table->string('grand_total');
+        }); */
     }
 
     /**

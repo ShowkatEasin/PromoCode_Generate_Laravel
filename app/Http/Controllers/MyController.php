@@ -1,9 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
 
+
+namespace App\Http\Controllers;
+use App\Models\PromoCode;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+
 
 class MyController extends Controller
 {
@@ -37,6 +41,33 @@ class MyController extends Controller
     {
         return view('managesales');
     }
+
+
+    public function store(Request $request)
+    {
+        $request->validate([
+           
+            'product_name' => 'required',
+            'total_price' => 'required',
+            'promo_code' => 'required',
+            'discount_amount' => 'required',
+            'grand_total' => 'required',
+            
+        ]);
+
+         $customer = new PromoCode;
+         $customer->product_name = $request->product_name;
+         $customer->total_price = $request->total_price;
+         $customer->promo_code = $request->promo_code;
+         $customer->discount_amount = $request->discount_amount;
+         $customer->grand_total = $request->grand_total;
+        
+        $customer->save();
+
+        return redirect()->action([MyController::class, 'managesales'])
+        //return redirect()->route('managesales');
+       ->with('success','Sales Data has been created successfully.');
+    }  
 
     /**
      * Display the specified resource.

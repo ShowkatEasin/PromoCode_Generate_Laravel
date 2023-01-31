@@ -125,7 +125,7 @@
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
                     <h2>Add Sales</h2>
-                    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+                    <p>This PromoCode will capable for two time to expends 15000 </p>
 
                     <ul class="nav nav-tabs tab-list">
                         <li class="active"><a data-toggle="tab" href="#home" aria-expanded="true"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Transaction 1</span></a>
@@ -140,29 +140,30 @@
                             <div class="box-inn-sp">
                                 <div class="inn-title">
                                     <h4>Sales Details</h4>
-                                    <p>You can use your Promo Code two times for 15000 BDT expend</p>
+                                    <p>You can use your Promo Code for 15000 BDT expend</p>
                                 </div>
                                 <div class="bor">
-									<form>
+									<form >
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="text" value="" class="validate">
+                                                <input type="text" name="product_name" value="" class="validate">
                                                 <label class="">Product Name</label>
                                             </div>
                                             <div class="input-field col s12">
-                                                <input type="text" value="" class="validate">
+                                                <input type="text" name="total_price" value="" class="validate">
                                                 <label>Total Price</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="" class="validate">
+                                                <input type="text" name="promo_code" value="" class="validate">
+                                                <button class="btn btn-info btn-sm">Apply Coupon</button>
                                                 <label>Promo Code</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="" class="validate">
-                                                <label>Discount Amount or %</label>
+                                                <input type="text" name="discount_amount"  class="validate" readonly>
+                                                <label>Discount Amount</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="" class="validate">
+                                                <input type="text" name="grand_total" class="validate" readonly>
                                                 <label>Grand Total</label>
                                             </div>
                                         </div>
