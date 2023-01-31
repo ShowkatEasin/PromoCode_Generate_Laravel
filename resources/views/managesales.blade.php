@@ -3,7 +3,7 @@
 
 
 <head>
-    <title>Sales Page</title>
+    <title>Manage Sales</title>
     <!-- META TAGS -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,7 +101,7 @@
                                 <ul>
                                     <li><a href="{{ URL::to ("addsales") }}">Add Sales</a>
                                     </li>
-                                    <li><a href="admin-add-courses.html">Manage Sales</a>
+                                    <li><a href="{{ URL::to ("managesales") }}">Manage Sales</a>
                                     </li>
                                   
                                 </ul>
@@ -112,22 +112,107 @@
                 </div>
             </div>
 
+
             <!--== BODY INNER CONTAINER ==-->
             <div class="sb2-2">
                 <!--== breadcrumbs ==-->
                 <div class="sb2-2-2">
                     <ul>
-                        <li><a href="index-2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                        </li>
-                        <li class="active-bre"><a href="#"> Dashboard</a>
-                        </li>
+                       
                         <li class="page-back"><a href="index-2.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
                         </li>
                     </ul>
                 </div>
+
+                <!--== User Details ==-->
+                <div class="sb2-2-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4>Enquiry</h4>
+                                    <p>All about students like name, student id, phone, email, country, city and more</p>
+                                </div>
+                                <div class="tab-inn">
+                                    <div class="table-responsive table-desi">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <th>Total Price</th>
+													<th>Promo Code</th>
+                                                    <th>Discount Amount or %</th>
+													<th>Grand Total</th>
+													<th>View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Booking form</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Course enquiry</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Admission enquiry</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Seminar enquiry</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Event enquiry</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Common enquiry</td>
+                                                    <td>John smith</td>
+                                                    <td>johm_smith@gmail.com</td>
+													<td>+10 8415 6352</td>
+													<td><a href="admin-view-enquiry.html" class="ad-st-view">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+           
                
 
     <!--Import jQuery before materialize.js-->
+    
     <script src="{{ asset('admin') }}/js/main.min.js"></script>
     <script src="{{ asset('admin') }}/js/bootstrap.min.js"></script>
     <script src="{{ asset('admin') }}/js/materialize.min.js"></script>

@@ -128,59 +128,44 @@
                     <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
 
                     <ul class="nav nav-tabs tab-list">
-                        <li class="active"><a data-toggle="tab" href="#home" aria-expanded="true"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Exam 1</span></a>
+                        <li class="active"><a data-toggle="tab" href="#home" aria-expanded="true"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Transaction 1</span></a>
                         </li>
-                        <li class=""><a data-toggle="tab" href="#menu1" aria-expanded="false"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Exam 2</span></a>
+                        <li class=""><a data-toggle="tab" href="#menu1" aria-expanded="false"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Transaction 2</span></a>
                         </li>
-                        <li class=""><a data-toggle="tab" href="#menu2" aria-expanded="false"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Exam 3</span></a>
-                        </li>
-                        <li class=""><a data-toggle="tab" href="#menu3" aria-expanded="false"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Exam 4</span></a>
-                        </li>
-                        <li class=""><a data-toggle="tab" href="#menu4" aria-expanded="false"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Exam 5</span></a>
-                        </li>
+                        
                     </ul>
 
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade active in">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Exam Details</h4>
-                                    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                    <h4>Sales Details</h4>
+                                    <p>You can use your Promo Code two times for 15000 BDT expend</p>
                                 </div>
                                 <div class="bor">
 									<form>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="text" value="Semester 1" class="validate">
-                                                <label class="">Main exam name</label>
+                                                <input type="text" value="" class="validate">
+                                                <label class="">Product Name</label>
                                             </div>
                                             <div class="input-field col s12">
-                                                <input type="text" value="Board Exam Training Classes" class="validate">
-                                                <label>Exam name</label>
+                                                <input type="text" value="" class="validate">
+                                                <label>Total Price</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="12 may 2018" class="validate">
-                                                <label>Date</label>
+                                                <input type="text" value="" class="validate">
+                                                <label>Promo Code</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="10:00AM" class="validate">
-                                                <label>Start time</label>
+                                                <input type="text" value="" class="validate">
+                                                <label>Discount Amount or %</label>
                                             </div>
 											<div class="input-field col s12">
-                                                <input type="text" value="03:00hrs" class="validate">
-                                                <label>Duration</label>
+                                                <input type="text" value="" class="validate">
+                                                <label>Grand Total</label>
                                             </div>
                                         </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <select>
-									  <option value="" disabled selected>Select Status</option>
-									  <option value="1">Active</option>
-									  <option value="2">De-Active</option>
-									  <option value="3">Delete</option>
-									</select>
-                                                </div>
-                                            </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="waves-effect waves-light btn-large waves-input-wrapper" style=""><input type="submit" class="waves-button-input" value="Submit"></i>
