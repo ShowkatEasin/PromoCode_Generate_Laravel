@@ -142,11 +142,11 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                <input type="text" name="name" value="" class="validate">
-                                                <label class="">Product Name and Price</label>
+                                                <label class="">Product Name</label>
                                             </div>
                                             <div class="input-field col s12">
                                                 <input type="text" name="price" value="" class="validate">
-                                                <label>Product Name and Price</label>
+                                                <label>Product Price</label>
                                             </div>
 											{{-- <div class="input-field col s12">
                                                 <input type="text" name="promo_code" value="" class="validate">
@@ -164,9 +164,11 @@
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <i class="waves-effect waves-light btn-large waves-input-wrapper" style=""><input type="submit" class="waves-button-input" value="Submit"></i>
+                                                <i class="waves-effect waves-light btn-large waves-input-wrapper"
+                                                 style=""><input type="submit" class="waves-button-input" value="Submit" ></i>
                                             </div>
                                         </div>
+                                        {{-- <a href="{{ URL::to('order') }}" class="btn btn-primary">Submit</a> --}}
                                     </form>
                                 </div>
                             </div>

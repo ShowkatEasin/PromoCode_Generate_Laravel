@@ -142,31 +142,23 @@
                                             <thead>
                                                 <tr>
                                                     <th>SL No.</th>
-                                                    <th>Product Name</th>
-                                                    <th>Total Price</th>
+                                                    <th>Coupon Name</th>
 													<th>Promo Code</th>
                                                     <th>Discount Amount </th>
-                                                    <th>Total Discount</th>
-													<th>Grand Total</th>
-
-													
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                              {{--   @csrf
-                                                @foreach ($customers as $key => $customer) 
+                                                @foreach ($promoCodes as $key => $data) 
+                                               
                                                 
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td>{{ $customer->product_name }}</td>
-                                                    <td>{{ $customer->total_price }}</td>
-                                                    <td>{{ $customer->promo_codee }}</td>
-                                                    <td>{{ $customer->discount_amount }}</td>
-                                                    <td>{{ $customer->grand_total }}</td>
-													
+                                                    <td>{{ $data->coupon_name }}</td>
+                                                    <td>{{ $data->coupon_code }}</td>
+                                                    <td>{{ $data->coupon_disc }}</td>
 													
                                                 </tr>
-                                                @endforeach --}}
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

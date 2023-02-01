@@ -20,7 +20,7 @@ class OrdersController extends Controller
     }
     public function store(Request $request){
         $products = $request->input('products');
-        $result = 0;
+        $result = 1;
         foreach($products as  $item){
             $result = $result + $item ;
         }

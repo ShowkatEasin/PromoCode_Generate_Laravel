@@ -125,7 +125,7 @@
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
                     <h2>Add Coupon</h2>
-                    <p>This PromoCode will capable up to 5000 to expend 15000 </p>
+                    <p>Promo Code will capable for one time if you spend 15000, Then you will get 5000 off</p>
 
                    
 
@@ -142,7 +142,7 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <input type="text" name="coupon_name" value="" class="validate">
-                                                <label class="">Coupon Name</label>
+                                                <label class="">Write Something to get Promo Code then Submit</label>
                                             </div>
                                             
 											{{-- <div class="input-field col s12">
@@ -164,8 +164,10 @@
                                                 <i class="waves-effect waves-light btn-large waves-input-wrapper" style=""><input type="submit" class="waves-button-input" value="Submit"></i>
                                             </div>
                                         </div>
+                                        
                                     </form>
                                 </div>
+                                <a class="btn btn-info mt-3" href="{{ URL::to('order') }}">Get New Promo Code</a>
                             </div>
                         </div>
 

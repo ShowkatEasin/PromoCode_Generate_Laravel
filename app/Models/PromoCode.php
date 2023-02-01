@@ -10,6 +10,7 @@ class PromoCode extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['product_name','total_price','promo_code',
-    'discount_amount', 'grand_total'];
+    // protected $fillable = ['coupon_name','coupon_code','coupon_used',
+    // 'coupon_disc'];
+    protected $guarded = [];
 }

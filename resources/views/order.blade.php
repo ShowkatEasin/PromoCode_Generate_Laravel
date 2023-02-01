@@ -125,7 +125,12 @@
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
                     <h2>Add Coupon</h2>
-                    <p>This PromoCode will capable up to 5000 to expend 15000 </p>
+                    <p>This PromoCode will capable for one time by spend 15000 BDT then you will get 5000 BDT. To get new Promo Code
+                        <a class="btn btn-primary" href="{{ URL::to('coupon') }}">Click Here</a>
+                    </p>
+                    
+
+
 
                    
 
@@ -135,6 +140,13 @@
                                 <div class="inn-title">
                                     <h4>Order Details</h4>
                                     <p>You can use your Promo Code for 15000 BDT expend</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                                     <h3>Coupons Codes:</h3>
                                     <ul>
                                         @foreach ($coupons as $item)
@@ -144,7 +156,8 @@
                                     </ul>
                                 </div>
                                 <div class="bor">
-									<form method="post" action="{{ route('order_create') }}">
+									{{-- <form method="post" action="{{ route('order_create') }}"> --}}
+									<form method="post" action="{{ route('manage.sell.store') }}">
                                     @csrf
                                         <div class="row">
                                             <ul>
@@ -158,24 +171,22 @@
 
                                             <div class="input-field col s12">
                                                 <input type="text" name="user_name" value="" class="validate">
-                                                <label class="">customer Name</label>
+                                                <label class="">Customer Name</label>
                                             </div>
                                             @if ($coupon)
                                             <div class="input-field col s12">
                                                 <input type="text" name="coupon_code" value="" class="validate">
-                                                <label class="">coupon code</label>
+                                                <label class="">Coupon code</label>
                                             </div>
                                             @endif
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="waves-effect waves-light btn-large waves-input-wrapper" style=""><input type="submit" class="waves-button-input" value="Submit"></i>
-                                            </div>
-                                        </div>
+                                           
                                     </form>
                                 </div>
-                            </div>
-                        </div>
+                            
 
                {{--  Main Content --}}
 

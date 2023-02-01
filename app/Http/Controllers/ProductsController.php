@@ -11,6 +11,6 @@ class ProductsController extends Controller
     public function store(Request $request){
        
         Product::create($request->all());
-        return redirect('/addsales');
+        return redirect('/order');
     }
 }

@@ -30,5 +30,6 @@ Route::name('coupon_')->group(function () {
 });
 Route::get('/sales',[MyController::class,'sales'])->name("SalesPage");
 Route::get('/addsales',[MyController::class,'addsales'])->name("AddSales");
-Route::get('/managesales',[MyController::class,'managesales'])->name("ManageSales");
+Route::get('/managesales',[MyController::class,'manageSellAll'])->name("manage.sell.all");
+Route::post('/managesales',[MyController::class,'managesales'])->name("manage.sell.store");
 Route::post('/product', [ProductsController::class, 'store'])->name('product');

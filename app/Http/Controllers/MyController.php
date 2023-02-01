@@ -37,9 +37,17 @@ class MyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function managesales()
+    public function managesales(Request $request)
     {
-        return view('managesales');
+        // return $request->all();
+        // return view('managesales');
+        return redirect()->route('manage.sell.all')->with('success', "Here is all sales record");
+    }
+    
+    public function manageSellAll()
+    {
+        $promoCodes = PromoCode::all();
+        return view('managesales', compact('promoCodes'));
     }
 
     public function coupon(){
