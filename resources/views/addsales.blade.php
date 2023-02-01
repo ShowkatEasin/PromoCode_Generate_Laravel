@@ -125,7 +125,7 @@
                             <div class="box-inn-sp admin-form">
 				<div class="sb2-2-add-blog sb2-2-1">
                     <h2>Add Sales</h2>
-                    <p>This PromoCode will capable up to 5000 to expend 15000 </p>
+                    <p>Please Enter Here Product Name and Price </p>
 
                    
 
