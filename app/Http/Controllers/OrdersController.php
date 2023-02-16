@@ -32,7 +32,7 @@ class OrdersController extends Controller
             $check_coupon = PromoCode::where('coupon_code', $request->input('coupon_code'))
             ->first();
         if(!$check_coupon->coupon_used){
-            $result=$result-5000;
+            $result=$result-500;
                 $check_coupon->coupon_used = 1;
                 $check_coupon->save();
         }else{
