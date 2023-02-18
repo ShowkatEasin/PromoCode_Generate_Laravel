@@ -12,7 +12,6 @@ class OrdersController extends Controller
 {
     public function index(){
         $products = Product::get();
-       
             $coupon = 1;
         $coupons = PromoCode::get();
     
@@ -32,7 +31,7 @@ class OrdersController extends Controller
             $check_coupon = PromoCode::where('coupon_code', $request->input('coupon_code'))
             ->first();
         if(!$check_coupon->coupon_used){
-            $result=$result-500;
+            $result=$result-5000;
                 $check_coupon->coupon_used = 1;
                 $check_coupon->save();
         }else{
