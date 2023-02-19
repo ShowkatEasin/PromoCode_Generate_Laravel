@@ -12,7 +12,7 @@ class OrdersController extends Controller
 {
     public function index(){
         $products = Product::get();
-            $coupon = 0;
+            $coupon = 1;
         $coupons = PromoCode::get();
     
         return view('order',compact('products','coupon','coupons'));
